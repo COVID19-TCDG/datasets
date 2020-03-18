@@ -1,0 +1,11 @@
+{
+  "name": "datasets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/COVID19-TCDG/datasets.git",
+  "author": "Nutchanon Ninyawee <me@nutchanon.org>",
+  "license": "MIT",
+  "scripts": {
+    "5lab": "node scripts/5lab.js"
+  }
+}
