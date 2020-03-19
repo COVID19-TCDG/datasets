@@ -1,4 +1,4 @@
-> Updated 18 March 2020
+> Updated 19 March 2020: 19:42
 
 # datasets
 a ready-to-use datasets and API around COVID-19 for Thai
@@ -7,7 +7,7 @@ a ready-to-use datasets and API around COVID-19 for Thai
 Statistic about numbers over time
  * **Format**: csv, excel and json
  * **Source**: <https://covid19.th-stat.com/>
- * **Updated**: 18 March 2020 12:00
+ * **Updated**: 19 March 2020 19:42
  * **Extract/Provide**: click download `csv` in the website to `~/Downloads` and run `make datasets/thstat.csv`
 
 | Column                    | Type  | Example      | Detail                                |
@@ -25,7 +25,7 @@ Statistic about numbers over time
 Information about each infected cases
  * **Format**: csv, excel and json
  * **Source**: <https://covidtracker.5lab.co/>
- * **Updated**: 18 March 2020 12:00
+ * **Updated**: 19 March 2020 19:42
  * **Extract/Provide**: `make datasets/5lab.csv`
 
 | Column | Type  | Example | Detail           |
