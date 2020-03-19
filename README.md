@@ -1,38 +1,125 @@
-> Updated 19 March 2020: 19:42
+> อัพเดท 19 มีนาคม 2020 19:42 Updated 19 March 2020: 19:42
 
-# datasets
-a ready-to-use datasets and API around COVID-19 for Thai
+# datasets ข้อมูล
 
-## Stats
-Statistic about numbers over time
- * **Format**: csv, excel and json
- * **Source**: <https://covid19.th-stat.com/>
- * **Updated**: 19 March 2020 19:42
- * **Extract/Provide**: click download `csv` in the website to `~/Downloads` and run `make datasets/thstat.csv`
 
-| Column                    | Type  | Example      | Detail                                |
-| ------------------------- | ----- | ------------ | ------------------------------------- |
-| Date                      | `str` | "2020-01-05" | Date                                  |
-| CumCase                   | `int` | 14           | Cumulative Case Since 01-01-20        |
-| CurrentlyInfectedPatients | `int` | 104          | Number of Currently Infected Patients |
-| Recovered                 | `int` | 9            | Number of Recovered Case              |
-| Deaths                    | `int` | 1            | Number of Death                       |
+Dataset และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ
 
-### Download
+
+## ข้อมูลสถานะการณ์การแพร่ระบาด
+
+### TH-STAT
+
+ข้อมูลทางสถิติอนุกรมเวลาของจำนวนผู้ติดเชื้อ
+
+ * **แหล่งข้อมูล**: <https://covid19.th-stat.com/>
+ * **อัพเดทล่าสุด**: 19 มีค. 2020 19:42
+ * **การดูแล**: ดาวนโหลด `csv` จากแหล่งข้อมูลลงใน `~/Downloads` จากนั้น รัน `make datasets/thstat.csv`
+
+| Column                    | ชนิด  | ตัวอย่าง     | หมายเหตุ                                 |
+| ------------------------- | ----- | ------------ | ---------------------------------------- |
+| Date                      | `str` | "2020-01-05" | วันที่                                   |
+| CumCase                   | `int` | 14           | ยอดสะสมผู้ติดเชื้อตั้งแต่วันที่ 01-01-20 |
+| CurrentlyInfectedPatients | `int` | 104          | จำนวนผู้รับการรักษา                      |
+| Recovered                 | `int` | 9            | จำนวนผู้ที่หายแล้ว                       |
+| Deaths                    | `int` | 1            | จำนวนผู้เสียชีวิต                        |
+
+#### Download/เข้าถึงจาก
 [csv](datasets/thstat.csv) | [excel](datasets/thstat.xlsx) | [json](datasets/thstat.json)
 
-## Cases
-Information about each infected cases
- * **Format**: csv, excel and json
- * **Source**: <https://covidtracker.5lab.co/>
- * **Updated**: 19 March 2020 19:42
- * **Extract/Provide**: `make datasets/5lab.csv`
+### 5Lab's CovidTracker
+ข้อมูลเกี่ยวกับเคสต่างๆ
+ * **แหล่งข้อมูล**: <https://covidtracker.5lab.co/>
+ * **อัพเดทล่าสุด**: 19 March 2020 19:42
+ * **การดูแล**: รัน `make datasets/5lab.csv`
 
-| Column | Type  | Example | Detail           |
-| ------ | ----- | ------- | ---------------- |
-| #WIP   | `str` | ""      | Work in Progress |
+| Column        | ชนิด  | ตัวอย่าง                                                 | หมายเหตุ      |
+| ------------- | ----- | -------------------------------------------------------- | ------------- |
+| Status        | `str` | "confirmed"                                              | กลุ่มข้อมูล   |
+| Date          | `str` | "2020-01-22 17:30"                                       | วันเวลาของเคส |
+| Placename     | `str` | "สถาบันบำราศนราดูร"                                      | สถานที่ของเคส |
+| Lat           | `int` | 13.8531028                                               | Latitude      |
+| Lng           | `int` | 100.5219305                                              | Longitude     |
+| Age           | `int` | 54                                                       | อายุ          |
+| Gender        | `str` | "female"                                                 | เพศ           |
+| Nationality   | `str` | "Chinese"                                                | เชื้อชาติ     |
+| From          | `str` | "China"                                                  | ประเทศ        |
+| Patientstatus | `str` | "recovered"                                              | สถานะผู้ป่วย  |
+| Note          | `str` | "(เคสที่ 23) ขับขี่รถรับจ้างรับนักท่องเที่ยวจีนในหัวหิน" | หมายเหตุ      |
+| Source        | `str` | "https://www.bbc.com/thai/thailand-51701394"             | แหล่งอ้างอิง  |
+| id            | `int` | 22                                                       | เลขที่        |
 
-
-
-### Download
+#### Download/เข้าถึงจาก
 [csv](datasets/5lab.csv) | [excel](datasets/5lab.xlsx) | [json](datasets/5lab.json)
+
+
+
+### CircleOnCircles' จำนวนการตรวจ
+*กำลังทำ*
+ * **แหล่งข้อมูล**: @CircleOnCircles
+ * **อัพเดทล่าสุด**: *กำลังทำ*
+ * **การดูแล**: *กำลังทำ*
+
+| Column       | ชนิด  | ตัวอย่าง     | หมายเหตุ                |
+| ------------ | ----- | ------------ | ----------------------- |
+| Date         | `str` | "2020-01-22" | วันเวลาของเคส           |
+| TestPositive | `int` | 212          | ยอดสะสมที่ผลตรวจเป็นบวก |
+| TestNegative | `int` | 5052         | ยอดสะสมที่ผลตรวจเป็นลบ  |
+| Waiting      | `int` | 2893         | ยอดสะสมที่กำลังผลตรวจ   |
+
+#### Download/เข้าถึงจาก
+*กำลังทำ*
+
+### Noob Learning's Big Query
+ที่มาจาก [Noob Learning Post](https://www.facebook.com/nooblearning/posts/524596781786891)
+ * **แหล่งข้อมูล**: API https://covid19.workpointnews.com/
+ * **อัพเดทล่าสุด**: ทุกชั่วโมง?
+ * **การดูแล**: [katopz/nl-covid](https://github.com/katopz/nl-covid)
+
+| ตาราง | คำอธิบาย                                          |
+| ----- | ------------------------------------------------- |
+| cases | รายละเอียดเคสต่างคล้ายกับ [5Lab's CovidTracker]() |
+| trend | รายละเอียดตัวเลขผู้ติดเชื้อคล้ายกับ [TH-STAT]()   |
+| world | รายละเอียดตัวเลขผู้ติดเชื้อรายประเทศ              |
+
+
+#### Download/เข้าถึงจาก
+[Google Big Query](https://console.cloud.google.com/bigquery?project=nl-covid&p=nl-covid&d=covid19&page=dataset)
+
+## กำลังทางการแพทย์
+
+### ข้อมูลโรงพยาบาลกระทรวงสาธารณะสุข
+ข้อมูลที่สำคัญกับของโรงพยาบาลทั่วประเทศทั้งภาครัฐและเอกชน ข้อมูลที่เกี่ยวข้องกับการระบาดที่สำคัญเช่น จำนวนเตียง ICU, จำนวนบุคคลากร
+
+![ICU Staff Ventalator](assets/gishealth.png)
+
+#### Download/เข้าถึงจาก
+[Website](http://gishealth.moph.go.th/healthmap/report.php) *กำลังทำเป็นไฟล์*
+
+[ที่มา](https://www.facebook.com/pg/thaivaluer)
+
+## ข้อมูลพิกัดสถานที่
+
+### ThaiValuer's POI
+POI สถานที่ ชุมชนต่าง ๆ เพื่อประยุกต์ใช้ในการวางแผนรับมือกับ COVID-19 [ที่มา](https://www.facebook.com/thaivaluer/posts/2494014620821845)
+
+![List of POI Category](assets/ThaiValuerPOI.jpg)
+
+#### Download/เข้าถึงจาก
+[Google Drive - KMZ](https://drive.google.com/open?id=14vsZxcAyfheEhsuIBX6yzfcI33u7eewF) | [Google Drive - xls](https://drive.google.com/open?id=1uIzpYGX3MI0BP4LERajzL2-lObnWP4mg)
+
+
+### แหล่งอื่นๆ
+ - [ข้อมูลพิกัดจุดบริการของรัฐจากระบบ CITIZENinfo](https://data.go.th/dataset/citizeninfo_location_mar2563) - [ที่มา](https://data.go.th/blog/covid-19-citizeninfo)
+
+## เว็ปไซต์
+
+### ภาพเว็ปไซต์กรมควบคุมโรค
+Screenshot ของ <https://ddc.moph.go.th/viralpneumonia/index.php> ตั้งแต่ 16 มีนาคม 2020
+
+ * **แหล่งข้อมูล**: @CircleOnCircles
+ * **อัพเดทล่าสุด**: ทุกเที่ยงคืน
+ * **การดูแล**: He uses Stillio.
+
+### Download/เข้าถึงจาก
+[Google Drive - png](https://drive.google.com/drive/folders/1a4Qzn-DA7yWpGwIAPa23VXgh3qwwT3t0?usp=sharing)
