@@ -13,7 +13,7 @@ Dataset และ API ที่พร้อมใช้งานสำหรั�
 รายงานผู้ป่วยยืนยันประจำวัน จาก กรมควบคุมโรค
 
 #### Download/เข้าถึงจาก
-[csv](https://data.go.th/dataset/covid-19-daily) [API](https://data.go.th/dataset/covid-19-daily)
+[csv](https://data.go.th/dataset/covid-19-daily) | [API](https://data.go.th/dataset/covid-19-daily)
 
 ### TH-STAT
 
