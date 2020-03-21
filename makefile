@@ -1,3 +1,7 @@
+install:
+	conda env create -f environment.yml
+	yarn install
+
 build: datasets/thstat.csv datasets/5lab.csv
 
 datasets/thstat.csv:
