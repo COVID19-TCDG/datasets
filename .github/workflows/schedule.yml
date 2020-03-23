@@ -54,4 +54,5 @@ jobs:
       with:
         title: datasets-auto-update
         assignees: circleoncircles
+        branch-suffix: timestamp
         token: ${{ secrets.GH_TOKEN }}
