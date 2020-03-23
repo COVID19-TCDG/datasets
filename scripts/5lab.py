@@ -3,6 +3,7 @@ import pandas as pd
 from requests_html import HTMLSession
 import fire
 import json
+from pathlib import Path
 
 
 def export_dataframe(df, name):
@@ -18,6 +19,10 @@ def download():
     scripts = r.html.find("body > script")
     data = scripts[0].text
     match = re.search(r"(function.*)\);", data)
+
+    path = Path("tmp/data.js")
+    path.parent.mkdir(exist_ok=True)
+
     with open("tmp/data.js", "w") as f:
         f.write("module.exports.data = ")
         f.write(match.group(1))
