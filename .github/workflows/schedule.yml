@@ -22,13 +22,15 @@ jobs:
 
     - uses: goanpeca/setup-miniconda@v1
       with:
-        auto-update-conda: true
-        python-version: 3.7
+        miniconda-version: 'latest'
+        activate-environment: covid
 
     # Runs a single command using the runners shell
     - name: install
       shell: zsh -l {0}
       run: |
+        conda info
+        conda list
         python --version
         which python
         make install
@@ -37,6 +39,8 @@ jobs:
     - name: generate datasets
       shell: zsh -l {0}
       run: |
+        conda info
+        conda list
         python --version
         which python
         make generate
