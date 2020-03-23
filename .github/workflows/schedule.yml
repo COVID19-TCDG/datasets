@@ -35,6 +35,8 @@ jobs:
     - name: generate datasets
       shell: zsh -l {0}
       run: |
+        python --version
+        which python
         make generate
         ls -lH datasets
         git status
