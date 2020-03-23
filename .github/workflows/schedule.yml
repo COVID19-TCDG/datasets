@@ -27,7 +27,9 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: install
-      run: make install
+      run: |
+        conda init
+        make install
 
     # Runs a set of commands using the runners shell
     - name: generate datasets
