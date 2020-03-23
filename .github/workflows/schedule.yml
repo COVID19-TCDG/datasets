@@ -6,7 +6,6 @@ name: generate-datasets
 # events but only for the master branch
 on:
   push:
-    - branch: master
   schedule:
     - cron:  '0 * * * *'
 
