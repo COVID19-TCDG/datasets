@@ -27,12 +27,13 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: install
+      shell: zsh -l {0}
       run: |
-        conda init
         make install
 
     # Runs a set of commands using the runners shell
     - name: generate datasets
+      shell: zsh -l {0}
       run: |
         make generate
         ls -lH datasets
