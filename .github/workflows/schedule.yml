@@ -28,7 +28,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: install
-      shell: zsh -l {0}
+      shell: zsh -l {1}
       run: |
         conda info
         conda list
@@ -38,7 +38,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: generate datasets
-      shell: zsh -l {0}
+      shell: zsh -l {1}
       run: |
         conda info
         conda list
