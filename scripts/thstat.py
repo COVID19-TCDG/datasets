@@ -12,18 +12,21 @@ def export_dataframe(df, name):
 def preprocess(path):
     path = Path(path)
 
-    df = pd.read_csv(path / "timeline_summary.csv")
-    df.columns = ["Date", "CumCase"]
+    df = pd.read_csv(path / "timeline.csv")
+    df.columns = [
+        "Date",
+        "CumCase",
+        "Recovered",
+        "CurrentlyInfectedPatients",
+        "Deaths",
+    ]
+    df = df[["Date", "CurrentlyInfectedPatients", "Recovered", "Deaths"]]
+    df = df.drop_duplicates()
 
-    df1 = pd.read_csv(path / "timeline.csv")
-    df1.columns = ["Date", "Recovered", "CurrentlyInfectedPatients", "Deaths"]
-    df1 = df1[["Date", "CurrentlyInfectedPatients", "Recovered", "Deaths"]]
-    df1 = df1.drop_duplicates()
-
-    out = pd.merge(df, df1, left_on="Date", right_on="Date")
-    out["Date"] = pd.to_datetime(out.Date)
+    # out = pd.merge(df, df1, left_on="Date", right_on="Date")
+    df["Date"] = pd.to_datetime(df.Date)
     # out = out.set_index("Date")
-    export_dataframe(out, "thstat")
+    export_dataframe(df, "thstat")
 
 
 if __name__ == "__main__":
