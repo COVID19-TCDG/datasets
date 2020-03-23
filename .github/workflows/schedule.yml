@@ -23,6 +23,7 @@ jobs:
     - uses: goanpeca/setup-miniconda@v1
       with:
         miniconda-version: 'latest'
+        environment-file: environment.yml
         activate-environment: covid
 
     # Runs a single command using the runners shell
@@ -33,7 +34,7 @@ jobs:
         conda list
         python --version
         which python
-        make install
+        yarn install
 
     # Runs a set of commands using the runners shell
     - name: generate datasets
