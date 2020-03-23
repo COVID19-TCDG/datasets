@@ -4,9 +4,11 @@ name: generate-datasets
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on: push
-  # schedule:
-  #   - cron:  '* * * * *'
+on:
+  push:
+    - branch: master
+  schedule:
+    - cron:  '0 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -48,3 +50,10 @@ jobs:
         make generate
         ls -lH datasets
         git status
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2
+      with:
+        title: datasets-auto-update
+        assignees: circleoncircles
+        token: ${{ secrets.GH_TOKEN }}
