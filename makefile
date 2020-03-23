@@ -4,7 +4,7 @@ install:
 
 build: datasets/5lab.csv
 
-regenerate: clean/5lab datasets/5lab.csv
+generate: prep/conda clean/5lab datasets/5lab.csv
 
 prep/conda:
 	conda activate covid
