@@ -32,7 +32,7 @@ Dataset และ API ที่พร้อมใช้งานสำหรั�
 | Deaths                    | `int` | 1            | จำนวนผู้เสียชีวิต                        |
 
 #### Download/เข้าถึงจาก
-[csv](datasets/thstat.csv) | [excel](datasets/thstat.xlsx) | [json](datasets/thstat.json)
+[csv](datasets/thstat.csv) | [excel](datasets/thstat.xlsx) | [json](datasets/thstat.json) | [Google BigQuery](https://console.cloud.google.com/bigquery?project=nl-covid&p=nl-covid&d=tcgd&t=thstat20200324&page=table)
 
 ### 5Lab's CovidTracker
 ข้อมูลเกี่ยวกับเคสต่างๆ
@@ -57,7 +57,7 @@ Dataset และ API ที่พร้อมใช้งานสำหรั�
 | id            | `int` | 22                                                       | เลขที่        |
 
 #### Download/เข้าถึงจาก
-[csv](datasets/5lab.csv) | [excel](datasets/5lab.xlsx) | [json](datasets/5lab.json)
+[csv](datasets/5lab.csv) | [excel](datasets/5lab.xlsx) | [json](datasets/5lab.json) | [Google BigQuery](https://console.cloud.google.com/bigquery?project=nl-covid&p=nl-covid&d=tcgd&t=5lab20200324&page=table)
 
 
 ### Noob Learning's Big Query
@@ -74,7 +74,7 @@ Dataset และ API ที่พร้อมใช้งานสำหรั�
 
 
 #### Download/เข้าถึงจาก
-[Google Big Query](https://console.cloud.google.com/bigquery?project=nl-covid&p=nl-covid&d=covid19&page=dataset)
+[Google BigQuery](https://console.cloud.google.com/bigquery?project=nl-covid&p=nl-covid&d=covid19&page=dataset)
 
 ## กำลังทางการแพทย์
 
