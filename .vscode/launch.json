@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${file}",
             "args": [
-                "~/Downloads"
+                "preprocess",
+                "raw_data"
             ],
             "console": "integratedTerminal"
         }

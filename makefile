@@ -4,15 +4,19 @@ install:
 
 build: datasets/5lab.csv
 
-generate: clean/5lab datasets/5lab.csv
+generate:  datasets/5lab datasets/thstat
 
 prep/conda:
 	conda activate covid
 
-datasets/thstat.csv:
-	python scripts/thstat.py preprocess ~/Downloads
+datasets/thstat.csv: datasets/thstat
 
-datasets/5lab.csv:
+datasets/thstat:
+	python scripts/thstat.py preprocess raw_data
+
+datasets/5lab.csv: datasets/5lab
+
+datasets/5lab:
 	python scripts/5lab.py download
 	yarn 5lab
 	python scripts/5lab.py preprocess
