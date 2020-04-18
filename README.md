@@ -21,7 +21,7 @@ APIs จาก กรมควบคุมโรค
 
 ### TH-STAT
 
-> ❗ Please use [TH-STAT-API](#TH-STAT_API) instead 
+> ❗ Please use [TH-STAT-API](#th-stat-api) instead 
 
 ข้อมูลทางสถิติอนุกรมเวลาของจำนวนผู้ติดเชื้อ
 
