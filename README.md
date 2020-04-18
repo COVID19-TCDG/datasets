@@ -1,5 +1,3 @@
-> อัพเดท 2020-03-26 22:46:48
-
 # datasets ข้อมูล
 
 Dataset และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ
@@ -22,6 +20,8 @@ APIs จาก กรมควบคุมโรค
 [csv](https://data.go.th/dataset/covid-19-daily) | [API](https://data.go.th/dataset/covid-19-daily)
 
 ### TH-STAT
+
+> ❗ Please use [TH-STAT API](#TH-STAT_API) instead 
 
 ข้อมูลทางสถิติอนุกรมเวลาของจำนวนผู้ติดเชื้อ
 
