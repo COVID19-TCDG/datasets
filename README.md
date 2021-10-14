@@ -1,5 +1,7 @@
 # datasets ข้อมูล
 
+# แนะนำให้ใช้ https://github.com/djay/covidthailand ที่มีข้อมูลละเอียด และได้รับการดูแลต่อเนื่อง
+
 Dataset และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ
 
 > สนใจแชร์ API, database, datasets หรือต้องการจะ opensource โค้ด ที่เป็นประโยชน์ต่อสถานการณ์สามารถติดต่อผมได้ tcdg@nutchanon.org
