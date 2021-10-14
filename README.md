@@ -1,6 +1,7 @@
 # datasets ข้อมูล
 
-# แนะนำให้ใช้ https://github.com/djay/covidthailand ที่มีข้อมูลละเอียด และได้รับการดูแลต่อเนื่อง
+# แนะนำให้ใช้ https://github.com/djay/covidthailand แทนที่มีข้อมูลละเอียด และได้รับการดูแลต่อเนื่อง
+
 
 Dataset และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ
 
